@@ -1,22 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+const resovle = (viewPath) => {
+  return () => import(`@/views/${viewPath}/${viewPath}.vue`);
+};
 Vue.use(VueRouter)
-
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Index',
+    component: resovle('Index')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/login',
+    name: 'Login',
+    component: resovle('Login')
   }
 ]
 
@@ -25,5 +22,25 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+// 全局路由拦截
+router.beforeEach((to, from, next) => {
+  if(sessionStorage.userId) {
+    next()
+  } else {
+    sessionStorage.userId = 1
+    next({
+      path: '/login'
+    })
+  }
+  // if(to.path === "/") {
+  //   console.log(111)
+  //   next({
+  //     name: "Login"
+  //   })
+  // }
+  // console.log(to, from, next)
+})
+
+
 
 export default router
