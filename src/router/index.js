@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/index',
     name: 'Index',
     component: resovle('Index')
   },
@@ -24,14 +28,15 @@ const router = new VueRouter({
 })
 // 全局路由拦截
 router.beforeEach((to, from, next) => {
-  if(sessionStorage.userId) {
-    next()
-  } else {
-    sessionStorage.userId = 1
-    next({
-      path: '/login'
-    })
-  }
+  next()
+  // if(sessionStorage.userId) {
+  //   next()
+  // } else {
+  //   sessionStorage.userId = 1
+  //   next({
+  //     path: '/login'
+  //   })
+  // }
   // if(to.path === "/") {
   //   console.log(111)
   //   next({

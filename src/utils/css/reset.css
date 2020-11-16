@@ -1,0 +1,109 @@
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust:none;/*chrome下9px字体问题*/
+}
+fieldset, img {
+	border: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol, ul {
+	list-style: none;
+}
+address, caption, cite, code, dfn, em, strong, th, var,i {
+	font-weight: normal;
+	font-style: normal;
+}
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	/* font-size: 100%; */
+}
+q:before, q:after {
+	content: '';
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+input, button, textarea, select, optgroup, option {
+	font-family:inherit;
+	font-size:inherit;
+	font-style:inherit;
+	font-weight:inherit;
+}
+button {
+	border: none 0;
+	cursor: pointer;
+	vertical-align: middle;
+}
+input[type=radio] {
+	border: none 0
+}
+input:focus, textarea:focus {
+	outline-width:0
+}
+button::-moz-focus-inner {
+ border:0;
+ padding:0;
+ margin:0;
+}
+.clearfix:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+html {
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+
+input::-webkit-input-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+input::-moz-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+input:-ms-input-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+textarea::-webkit-input-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+textarea:-moz-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+textarea::-moz-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+textarea:-ms-input-placeholder {
+  color:#999;
+  font-size: 14px;
+}
+.el-loading-mask.is-fullscreen {
+    position: fixed;
+    background: rgba(255,255,255,.7);
+    opacity: 0.7;
+}

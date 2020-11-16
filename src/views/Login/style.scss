@@ -6,4 +6,51 @@
     position: fixed;
     left: 0;
     top: 0;
+    .login-import{
+        width: 400px;
+        height: 220px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color:rgba(255,255,255,0.5);
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        transition: 1s 1s;
+        .login-title{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: #333333;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .login-account{
+        }
+        .login-password{
+
+        }
+        .login-operation{
+            justify-content: space-around;
+            margin: 20px 0  10px 0!important;
+        }
+        .login-chunk{
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            label{
+                width: 15%;
+                margin-left: 15px;
+            }
+            .el-input{
+                flex: 1;
+                margin: 0 15px 0 0;
+            }
+        }
+    }
+    .login-import:hover{
+        background-color:rgba(255,255,255,0.8);
+    }
 }
