@@ -1,5 +1,7 @@
 <template>
-    <div>111122222</div>
+    <div>
+        <Header/>
+    </div>
 </template>
 
 <script>

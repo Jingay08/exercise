@@ -28,11 +28,19 @@ export default {
             account_input: '',
             password_input: '',
             backCount: 0,
-            backArr: this.constant["backArr"]
+            backArr: this.constant["backArr"],
+            backFlag: true,
+            timeOut: undefined
         }
     },
     methods: {
         CutBack() {
+            if(!this.backFlag) return; 
+            this.backFlag = false;
+            clearTimeout(this.timeOut);
+            this.timeOut = setTimeout(() => {
+                this.backFlag = true;
+            },1000);
             let nowBack  = this.backArr[this.backCount];
             let nextBack = this.backArr[this.backCount+1] ? this.backArr[this.backCount+1] : this.backArr[0];
             let replaceBack = this.$refs.backLog.className.replace(nowBack, nextBack);
@@ -46,7 +54,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

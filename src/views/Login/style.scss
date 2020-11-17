@@ -1,42 +1,43 @@
+$fadeIn: all 1s ease-in-out;
 #login{
     width: 100%;
     height: 100%;
     background: black;
     .back-theEarth{
         background: url('../../assets/login_icon.jpg'); 
-        transition: all 0.6s ease-in-out;     
+        transition: $fadeIn; 
     }
     .back-sun{
         background: url('../../assets/back_sun_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_mercury{
         background: url('../../assets/back_mercury_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_venus{
         background: url('../../assets/back_venus_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_mars{
         background: url('../../assets/back_mars_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_jupiter{
         background: url('../../assets/back_jupiter_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_saturn{
         background: url('../../assets/back_saturn_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_uranus{
         background: url('../../assets/back_uranus_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .back_neptune{
         background: url('../../assets/back_neptune_icon.jpg');
-        transition: all 0.6s ease-in-out;
+        transition: $fadeIn;
     }
     .login-back{
         width: 100%;
