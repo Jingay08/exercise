@@ -1,15 +1,70 @@
 #login{
     width: 100%;
     height: 100%;
-    background: url('../../assets/login_icon.jpg');
-    background-size: 100% 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
+    background: black;
+    .back-theEarth{
+        background: url('../../assets/login_icon.jpg'); 
+        transition: all 0.6s ease-in-out;     
+    }
+    .back-sun{
+        background: url('../../assets/back_sun_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_mercury{
+        background: url('../../assets/back_mercury_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_venus{
+        background: url('../../assets/back_venus_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_mars{
+        background: url('../../assets/back_mars_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_jupiter{
+        background: url('../../assets/back_jupiter_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_saturn{
+        background: url('../../assets/back_saturn_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_uranus{
+        background: url('../../assets/back_uranus_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .back_neptune{
+        background: url('../../assets/back_neptune_icon.jpg');
+        transition: all 0.6s ease-in-out;
+    }
+    .login-back{
+        width: 100%;
+        height: 100%;
+        min-width: 1000px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed;
+        left: 0;
+        top: 0;
+        zoom: 1;
+        animation: round_animate 240s linear infinite; 
+        cursor: pointer;
+    }
+    @keyframes round_animate {
+        to {
+            transform: rotate(1turn);
+        }
+    }
     .login-import{
         width: 400px;
         height: 220px;
-        position: absolute;
+        position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);

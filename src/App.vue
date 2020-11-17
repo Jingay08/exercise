@@ -14,7 +14,7 @@
 body {
   width: 100%;
   height: 100%;
-  min-width: 1350px;
+  min-width: 1500px;
   // background: url('assets/background_icon.png') no-repeat;
   // background-attachment: fixed;
   // /* 元素的最小宽度 */
