@@ -1,4 +1,4 @@
-.Study{
+.study{
     .fade-enter-active {
         position: fixed;
         width: 100%;
@@ -40,6 +40,9 @@
     }
     &-content{
         display: flex;
+        .content-menu{
+            width: 20%;
+        }
         .content-list{
             flex:1;
         }
