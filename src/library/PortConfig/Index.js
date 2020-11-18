@@ -1,10 +1,9 @@
-const INDEX = {
+const OPERATION = {
     Post:{
-      
     },
     Get:{
-    
+        
     }
 }
 
-export default INDEX;
+export default OPERATION

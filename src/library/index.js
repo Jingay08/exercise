@@ -68,6 +68,29 @@ export default {
         Vue.prototype.$ElsPort = new ElsPort();
         Vue.prototype.$ElsWord = new ElsWord();
         Vue.prototype.$Bus = new Vue();
+
+        class CommonLibrary extends Vue {
+            constructor(arg,...params) {
+                super(arg);
+                this.lodingArr = [];
+            }
+            loadingAlone(domName) {
+                let result = this.lodingArr.indexOf(domName);
+                if(result != "-1") return;
+                this.lodingArr.push(domName); 
+                return this.$loading({
+                    target: document.querySelector(domName)
+                })
+            }
+            aloneClose(vueNode) {
+                let result = this.lodingArr.indexOf('.' + vueNode.target.classList[0]);
+                setTimeout(() => {
+                    vueNode.close();
+                },1000)
+                this.lodingArr.splice(result);
+            }
+        }
+        Vue.prototype.$Common = new CommonLibrary()
         // 模块级声明
         // let a = $More.axios({                                   // 接口模块实例化
         //     name:'flow',                                        // 接口模块名称
