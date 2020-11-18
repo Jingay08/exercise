@@ -1,0 +1,48 @@
+.Study{
+    .fade-enter-active {
+        position: fixed;
+        width: 100%;
+        animation: show 1s;
+    }
+    .fade-leave-active {
+        position: fixed;
+        width: 100%;
+        animation: hide 1s;
+    }
+    @keyframes show {
+        0% {
+            top: -60px;
+            left: 0;
+            // top: -60px;
+            
+            // opacity: 0;
+        }
+        100% {
+            top: 0;
+            left: 0;
+            // top: 0;
+            // right: 0;
+            // opacity: 1;
+        }
+    }
+    @keyframes hide {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        100% {
+            top: -60px;
+            left: 0;
+            // top: 0;
+            // right: 0;
+            // opacity: 1;
+        }
+    }
+    &-content{
+        display: flex;
+        .content-list{
+            flex:1;
+        }
+    }
+}
+

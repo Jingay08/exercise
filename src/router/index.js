@@ -15,6 +15,11 @@ const routes = [
     component: resovle('Index')
   },
   {
+    path: '/study',
+    name: 'Study',
+    component: resovle('Study')
+  },
+  {
     path: '/login',
     name: 'Login',
     component: resovle('Login')

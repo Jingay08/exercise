@@ -2,11 +2,21 @@
     background: #409EFF;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
+    .back{
+        display: flex;
+        align-items: center;
+        .el-page-header{
+            color: #fff;
+        }
+    }
     .role{
-        width: 200px;
+        // width: 100px;
+        margin-right: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
         &-photo{
             display: inline-block;
             width: 30px;
@@ -16,6 +26,29 @@
         }
         &-name{
             margin-left: 20px;
+        }
+        &-list{
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 100px;
+            background: #fff;
+            border-radius: 10px;
+            // display: none;
+            .el-divider{
+                margin: 0 0;
+            }
+            .role-list-item{
+                width: 100%;
+                text-align: center;
+                padding: 5px 0;
+                cursor: pointer;
+                
+            }
+            .role-list-item:hover{
+                color: #409EFF;
+            }
+            
         }
     }
 }
