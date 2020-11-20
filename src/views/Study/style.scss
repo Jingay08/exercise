@@ -1,29 +1,21 @@
 .study{
+    width: 100%;
+    height: 100%;
     .fade-enter-active {
-        position: fixed;
-        width: 100%;
         animation: show 1s;
-    }
-    .fade-leave-active {
-        position: fixed;
-        width: 100%;
-        animation: hide 1s;
     }
     @keyframes show {
         0% {
             top: -60px;
             left: 0;
-            // top: -60px;
-            
-            // opacity: 0;
         }
         100% {
             top: 0;
             left: 0;
-            // top: 0;
-            // right: 0;
-            // opacity: 1;
         }
+    }
+    .fade-leave-active {
+        animation: hide 1s;
     }
     @keyframes hide {
         0% {
@@ -33,18 +25,37 @@
         100% {
             top: -60px;
             left: 0;
-            // top: 0;
-            // right: 0;
-            // opacity: 1;
         }
     }
+    
     &-content{
+        width: 100%;
+        height: 100%;
         display: flex;
         .content-menu{
-            width: 20%;
+            width: 13%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            .menu-title{
+                width: 100%;
+                height: 200px;
+                border-radius: 50%;
+                background: black;
+            }
+            .el-menu{
+                // width: 100%;
+                
+            }
+            // .el-menu-vertical-demo:not(.el-menu--collapse) {
+            //     width: 200px;
+            //     min-height: 400px;
+            // }
         }
         .content-list{
             flex:1;
+            background: blue;
         }
     }
 }

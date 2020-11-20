@@ -1,8 +1,10 @@
 .el-header{
+    width: 100%;
     background: #409EFF;
     display: flex;
     justify-content: space-between;
     z-index: 10;
+    position: fixed;
     .back{
         display: flex;
         align-items: center;

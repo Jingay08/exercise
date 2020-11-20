@@ -1,7 +1,11 @@
 import Header from './Header/Header';
+import Tree from './Tree/Tree'
+import CollapseTransition from './CollapseTransition/CollapseTransition'
 
 const componentArr = [
-    Header
+    Header,
+    Tree,
+    CollapseTransition
 ];
 
 export default Vue => {

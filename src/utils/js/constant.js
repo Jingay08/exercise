@@ -16,5 +16,42 @@ export default {
         {
             name: '退出登录'
         }
-    ]
+    ],
+    menuList: [
+        {
+            name: 'JavaScript'
+        },
+        {
+            name: 'Css'
+        },
+        {
+            name: '算法'
+        },
+        {
+            name: '前端面试',
+            show: false,
+            children: [
+                {
+                    name: '技术社区',
+                    show: false,
+                    children: [
+                        {
+                            name: 'bb'
+                        }
+                    ]
+                },
+                {
+                    name: '博客团队',
+                    show: false,
+                    children: [
+                        {
+                            name: 'aa'
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    randomIcon: ['el-icon-apple','el-icon-cherry','el-icon-watermelon','el-icon-grape','el-icon-pear','el-icon-orange','el-icon-potato-strips','el-icon-lollipop','el-icon-ice-cream-square','el-icon-ice-cream-round','el-icon-burger','el-icon-tableware','el-icon-sugar','el-icon-dessert','el-icon-ice-cream','el-icon-food','el-icon-chicken'],
+
 }
