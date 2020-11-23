@@ -1,0 +1,52 @@
+.fade-enter-active {
+    animation: show 1s;
+}
+@keyframes show {
+    0% {
+        top: -60px;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+.fade-leave-active {
+    animation: hide 1s;
+}
+@keyframes hide {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    100% {
+        top: -60px;
+        left: 0;
+    }
+}
+/* 淡入淡出 */
+@keyframes thinEnter {
+    0% {
+        opacity: 0;
+    }
+     100% {
+        opacity: 1;
+    }
+}
+@keyframes thinLeave {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.thin-enter-active {
+    animation: thinEnter 0.8s;
+}
+.thin-leave-active {
+    animation: thinLeave 0.8s;
+}
+.thin-enter, .thin-leave-to {
+    opacity: 0;
+}
