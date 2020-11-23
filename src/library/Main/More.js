@@ -1,9 +1,9 @@
 import Port from '../Port'
 const METHODS = {
-    ref:{name:'Model',module:Manage,fn:'read'},
-    status:{name:'Work',module:Store,fn:'read'},
-    refReset:{name:'Model',module:Manage,fn:'reset'},
-    statusReset:{name:'Work',module:Store,fn:'reset'},
+    // ref:{name:'Model',module:Manage,fn:'read'},
+    // status:{name:'Work',module:Store,fn:'read'},
+    // refReset:{name:'Model',module:Manage,fn:'reset'},
+    // statusReset:{name:'Work',module:Store,fn:'reset'},
 }
 
 /**

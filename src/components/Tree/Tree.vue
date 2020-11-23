@@ -1,16 +1,16 @@
 <template>
     <div class="Tree">
-        <ul v-for="(item, idx) in data" :key="idx"  :class="`${classTitle}`" class="tree-item">
+        <ul v-for="(item, idx) in treeData" :key="idx"  :class="`${classTitle}`" class="tree-item">
             <li @click="expend($event,item)">
                 <i :class="mathRandom()" class="preIcon"></i>
                 <span class="title">{{item.name}}</span>
                 <template  v-if="item.children">
-                    <i class="el-icon-arrow-down arrowDown"></i>
+                    <i :class="[item.show ? 'el-icon-arrow-down': 'el-icon-arrow-right']" class=" arrowDown"></i>
                 </template> 
             </li>
             <template v-if="item.children">
                 <collapse-transition>
-                    <Tree :data="item.children" :classTitle="classTitle + '-' + idx" class="aa" v-show="item.show"/>
+                    <Tree :data="item.children" :classTitle="classTitle + '-' + idx" v-show="item.show"/>
                 </collapse-transition>
             </template>
         </ul>
@@ -33,7 +33,8 @@ export default {
     },
     data() {
         return {
-            randomIcon: this.constant.randomIcon
+            randomIcon: this.constant.randomIcon,
+            treeData: []
         }
     },
     methods:{
@@ -45,13 +46,20 @@ export default {
             let tarDom = e.currentTarget;
             let resultIsHave = tarDom.querySelector('.arrowDown');
             if(resultIsHave) {
-                console.log(item, '__')
                 item.show = !item.show;
             } else {
-                console.log(222)
             }
          
           
+        }
+    },
+    watch:{
+        data:{
+            handler(pre, next) {
+                this.treeData = _.cloneDeep(pre);
+            },
+            immediate: true,
+            deep: true   
         }
     }
 }

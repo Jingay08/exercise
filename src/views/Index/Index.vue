@@ -5,8 +5,6 @@
             :roleList="roleList" 
             :roleChunkFlag="roleFlag" 
             @click="RoleItemClick"/>
-        <div class="day index-back"></div>
-        <div class="night index-back"></div>
         <router-view></router-view>
     </div>
 </template>
@@ -21,7 +19,10 @@ export default {
             roleFlag: true,
             roleList: this.constant["roleList"],
             roleResult: {
-                "学习资料": "StudyDatum"
+                '学习资料': 'StudyDatum',
+                '裁剪图片': 'TailorPhoto',
+                '退出登录': 'QuitLogin'
+                
             }
         }
     },
@@ -32,11 +33,17 @@ export default {
         },
         StudyDatum() {
             this.$router.push({path: '/study'});
-            console.log(11111)
         },
+        TailorPhoto() {
+            this.$router.push({path: '/tailor'});
+        },
+        QuitLogin() {
+            this.$router.push({path: '/login'});
+        }
        
     },
     mounted() {
+        console.log(this.$JayWord, '__')
         // this.Move()
     }
 }

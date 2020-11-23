@@ -1,7 +1,7 @@
 import Single from './Main/More';
 import Els from './Els';
 import ElsPort from './ElsPort';
-import ElsWord from './ElsWord';
+import JayWord from './JayWord';
 export default {
     install(Vue,option){
         // 模块对象入口初始化
@@ -66,7 +66,7 @@ export default {
         Vue.prototype.$Bus = new Vue();
         Vue.prototype.$Els = new Els();
         Vue.prototype.$ElsPort = new ElsPort();
-        Vue.prototype.$ElsWord = new ElsWord();
+        Vue.prototype.$JayWord = new JayWord();
         Vue.prototype.$Bus = new Vue();
 
         class CommonLibrary extends Vue {

@@ -5,7 +5,6 @@
     transition: max-height .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
     .tree-item{
         width: 100%;
-
         li{
             width: 100%;
             height: 40px;
@@ -24,6 +23,7 @@
             .arrowDown{
                 margin-left: 10px;
             }
+             
         }
         li:hover{
             color: red;
@@ -31,18 +31,10 @@
     }
     div{
         ul{
-            padding: 0 0 0 20px;
+            padding: 0 0 0 15px;
         }
     }
    
   
-   
-}
-.accordion-enter{
-    background: red;
-    max-height: 0;
-}
-.accordion-enter-active {
-    background: red;
    
 }

@@ -9,19 +9,21 @@
             @mouseleave="RoleMouseleave">
             <el-avatar icon="el-icon-user-solid" :src="require(`@/${logoUrl}`)"></el-avatar>
             <p class="role-name">吼清拉少</p>
-            <div 
-                class="role-list" 
-                ref="roleList" 
-                v-if="roleFlag">
-                <template v-for="(item, idx) in roleList" >
-                    <p 
-                        v-if="item.name" 
-                        :key="idx" 
-                        class="role-list-item"
-                        @click="MessageClick(item.name)">{{item.name}}</p>
-                    <el-divider v-else-if="item.special" :key="idx"></el-divider>
-                </template>
-            </div>
+            <transition name="thin">
+                <div 
+                    class="role-list" 
+                    ref="roleList" 
+                    v-if="roleFlag">
+                    <template v-for="(item, idx) in roleList" >
+                        <p 
+                            v-if="item.name" 
+                            :key="idx" 
+                            class="role-list-item"
+                            @click="MessageClick(item.name)">{{item.name}}</p>
+                        <el-divider v-else-if="item.special" :key="idx"></el-divider>
+                    </template>
+                </div>
+            </transition>
         </div>
     </el-header>
 </template> 

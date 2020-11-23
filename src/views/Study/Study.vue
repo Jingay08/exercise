@@ -9,7 +9,22 @@
                 <Tree :data="menuList"/>
             </div>
             <div class="content-list">
-                {{menuList}}
+                <div v-for="(item, idx) in menuList" :key="idx" class="list-chunk">
+                    <p class="chunk-title">
+                        <i class="el-icon-sunny"></i>
+                        <span>{{item.name}}</span>
+                    </p>
+                    <div class="chunk-content">
+                        <div v-for="(chunk, chunkIdx) in item.content" :key="chunkIdx" class="content-study">
+                            <i :class="[chunk.icon ? chunk.icon : 'vue_icon']"></i>
+                            <div class="study-detail">
+                                <p class="detail-title">{{chunk.name}}</p>
+                                <p class="detail-content">{{chunk.titleContent}}</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

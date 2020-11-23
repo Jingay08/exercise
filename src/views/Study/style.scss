@@ -1,46 +1,21 @@
 .study{
     width: 100%;
     height: 100%;
-    .fade-enter-active {
-        animation: show 1s;
-    }
-    @keyframes show {
-        0% {
-            top: -60px;
-            left: 0;
-        }
-        100% {
-            top: 0;
-            left: 0;
-        }
-    }
-    .fade-leave-active {
-        animation: hide 1s;
-    }
-    @keyframes hide {
-        0% {
-            top: 0;
-            left: 0;
-        }
-        100% {
-            top: -60px;
-            left: 0;
-        }
-    }
-    
     &-content{
         width: 100%;
         height: 100%;
         display: flex;
         .content-menu{
-            width: 13%;
+            width: 10%;
             height: 100vh;
             display: flex;
             flex-direction: column;
             overflow-y: auto;
+            border-right: 1px solid #cccccc;
+            padding: 0 2px;
             .menu-title{
-                width: 100%;
-                height: 200px;
+                width: 100px;
+                height: 100px;
                 border-radius: 50%;
                 background: black;
             }
@@ -54,8 +29,72 @@
             // }
         }
         .content-list{
-            flex:1;
-            background: blue;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            .list-chunk{
+                width: calc(100% - 4%);
+                margin: 1% 2%;
+                display: flex;
+                flex-direction: column;
+                .chunk-title{
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    i{
+                        font-size: 20px;
+                    }
+                    span{
+                        margin-left: 10px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+                .chunk-content{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .content-study{
+                        width: 20%;
+                        display: flex;
+                        border: 1px solid #e4ecf3;
+                        border-radius: 5px;;
+                        margin: 15px;
+                        -webkit-transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+                        transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+                        -webkit-box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
+                        box-shadow: 0 4px 16px rgba(48, 55, 66, 0.15);
+                        cursor: pointer;
+                        i{
+                            margin: 15px 5px 15px 15px;
+                        }
+                        .study-detail{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 10px;
+                            p{
+                                text-align: left;
+                                font-size: 12px;
+                            }
+                            .detail-title{
+                                margin-top: 10px;
+                                font-weight: 600;
+                            }
+                            .detail-content{
+                                height: 50px;
+                                margin: 5px 0 10px 0;
+                            }
+                        }
+                    }
+                    .content-study:hover{
+                        box-shadow: 0 16px 32px 0 rgba(48, 55, 66, 0.15);
+                        transform: $goUp;
+                        transition-delay: 0s !important;
+                    }
+                }
+            }
         }
     }
 }
